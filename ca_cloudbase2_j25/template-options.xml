@@ -207,7 +207,46 @@
             <field name="enabled" type="toggle" default="0" />
         </fields>
         
-    </fieldset>
+       	<fields name="facebook" type="chain" label="FACEBOOK">
+            <field name="enabled" enabler="true" type="toggle" default="0" label="FACEBOOK_ENABLE"/>
+            <field name="code" type="text" default="https://www.facebook.com/x.x?v=wall" label="FACEBOOK_CODE" class="text-long"/>
+        </fields>
+	
+	<fields name="twitter" type="chain" label="TWITTER">
+            <field name="enabled" enabler="true" type="toggle" default="0" label="TWITTER_ENABLE"/>
+            <field name="code" type="text" default="https://twitter.com/#!/blogwildlife" label="TWITTER_CODE" class="text-long"/>
+        </fields>
+	
+	<fields name="youtube" type="chain" label="YOUTUBE">
+            <field name="enabled" enabler="true" type="toggle" default="0" label="YOUTUBE_ENABLE"/>
+            <field name="code" type="text" default="http://www.youtube.com/user/EcoTracker" label="YOUTUBE_CODE" class="text-long"/>
+	    <field name="icon" type="selectbox" default="square" label="YOUTUBE_ICON">
+                    <option value="square">square</option>
+                    <option value="rectangle">rectangle</option>
+            </field>
+        </fields>
+        
+        <fields name="blogger" type="chain" label="BLOGGER">
+            <field name="enabled" enabler="true" type="toggle" default="0" label="BLOGGER_ENABLE"/>
+            <field name="code" type="text" default="http://www.blogspot.co.uk/" label="BLOGGER_CODE" class="text-long"/>
+        </fields>
+	
+	<fields name="rotator1" type="chain" label="ROTATOR1">
+            <field name="enabled" enabler="true" type="toggle" default="0" label="ROTATOR1_ENABLE"/>
+            <field name="code" type="text" default="../images/template/rotate1" label="ROTATOR1_CODE" class="text-long"/>
+	</fields>
+		
+	<fields name="rotator2" type="chain" label="ROTATOR2">
+            <field name="enabled" enabler="true" type="toggle" default="0" label="ROTATOR2_ENABLE"/>
+            <field name="code" type="text" default="../images/template/rotate2" label="ROTATOR2_CODE" class="text-long"/>
+	</fields>
+	
+	<fields name="background" type="chain" label="BACKGROUND">
+            <field name="enabled" enabler="true" type="toggle" default="0" label="BACKGROUND_ENABLE"/>
+            <field name="code" type="text" default="../images/template/bg" label="BACKGROUND_CODE" class="text-long"/>
+	</fields>
+		
+</fieldset>
     <fieldset name="menu" label="MENU">
         <field name="menusettings" type="html" panel_position="right" show_label="false">
             <html><![CDATA[

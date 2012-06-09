@@ -2,7 +2,8 @@
 
 /* Basic styles */
 body {color: #333;}
-#rt-header, #rt-bottom {color: #333333;}
+#rt-header {color: #333333; background: url(../custom/rotate.php);}
+#rt-bottom {color: #333333;}
 .rt-container {background: #fff;} 
 .rt-article a{text-decoration: underline;}
 a:hover {color: #000; text-decoration: none;}
@@ -47,11 +48,16 @@ a:hover {color: #000; text-decoration: none;}
 	box-shadow: 2px 2px 9px rgba(0,0,0,0.1), -2px -2px 9px rgba(0,0,0,0.1);
 	padding: 6px;
 	overflow: hidden;
+	/* jc_hawk1: option but causes image to fall behind content boundary line 
+	background: url(/images/background/background1.png) 50% 0px no-repeat;
+	*/
 }
 #rt-mainbody .component-content{
 	border: 1px solid #dcdcdc;
 	padding: 15px;
 	overflow: hidden;
+	/* jc_hawk1: addition */
+	background: url(../../../images/template/background/background1.png) 50% 0px no-repeat;
 }
 .rt-block{
 	padding: 0px;

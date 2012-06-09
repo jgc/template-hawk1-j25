@@ -27,6 +27,8 @@ class GantryFeaturelogo extends GantryFeature {
 	function render($position="") {
         global $gantry;
 
+	$blogger_e = $gantry->get('blogger-enabled');
+	$blogger_c = $gantry->get('blogger-code');
 
         // default location for custom icon is {template}/images/logo/logo.png, with 'perstyle' it's
         // located in {template}/images/logo/styleX/logo.png
@@ -40,9 +42,11 @@ class GantryFeaturelogo extends GantryFeature {
             // get proper path to logo
             $path = (intval($gantry->get("logo-perstyle",0))===1) ? $path.DS : $path.DS;
             // append logo file
-            $path .= 'logo.png';
+            // $path .= 'logo.png';
+	    $path = '/templates/ca_cloudbase2_j25/custom/rotate.php';
 	
-			$userPath="/images/logo/logo.png";
+		//	$userPath="/images/logo/logo.png";
+			$userPath="/templates/ca_cloudbase2_j25/custom/rotate.php)";
 			if(JFile::exists(JPATH_ROOT.DS.$userPath)) $path=JPATH_ROOT.DS.$userPath;
 			
 
@@ -51,7 +55,9 @@ class GantryFeaturelogo extends GantryFeature {
                 $logosize = getimagesize($path);
                 if (isset($logosize[0]) && isset($logosize[1])) {
                 	
-                	$injectCSS=$logocss.' {width:'.$logosize[0].'px;height:'.$logosize[1].'px;';
+                	// jc_hawk1: debug force size
+			// $injectCSS=$logocss.' {width:'.$logosize[0].'px;height:'.$logosize[1].'px;';
+			$injectCSS=$logocss.' {width:100%;height:200px;';
                 	if(JFile::exists(JPATH_ROOT.$userPath)) $injectCSS.='background: transparent url(\''.$userPath.'\')';
                 	$injectCSS.='}';
                     
@@ -62,8 +68,38 @@ class GantryFeaturelogo extends GantryFeature {
 
 	    ob_start();
 	    ?>
-			<div class="rt-block">
-    	    	<a href="<?php echo $gantry->baseUrl; ?>" id="rt-logo"></a>
+		<div class="rt-block">
+		<table border="0" align="right">
+			<tr align="right">
+			<td align="left">
+				<a href="<?php echo $gantry->baseUrl; ?>" style="font-family: 'Times New Roman';font-size:36pt; font-style: italic; color:red; filter:Glow(color=red, strength=12)">
+				<div style="font-size: large" ><?php $config =& JFactory::getConfig(); echo $config->getValue( 'config.sitename' ); ?>
+				<?php // echo ' web site'; ?></a>
+			</td>
+			<td align="right" colspan="4">	
+				<jdoc:include type="modules" name="position-0"/>
+			</td></tr>
+			<tr align="right">
+			<td width="100%">
+			</td>
+			<td width="89px" align="center">
+				<?php echo '<a target="_blank" href="' . $gantry->get('youtube-code') . '">'; ?>
+				<img align="center" width="89" height="35" border="0" alt="You tube" src="templates/ca_cloudbase2_j25/images/social/youtube.png"></a>
+			</td>
+			<td width="40px" align="center">
+				<?php echo '<a target="_blank" href="' . $gantry->get('facebook-code') . '">'; ?>
+				<img align="center" width="35" height="35" border="0" padding="10" margin="10" alt="Facebook" src="templates/ca_cloudbase2_j25/images/social/facebook.png"></a>
+			</td>
+			<td width="40px" align="center">
+				<?php echo '<a target="_blank" href="' . $gantry->get('blogger-code') . '">'; ?>
+				<img align="center" width="35" height="35" border="0" padding="10" margin="10" alt="Blogger" src="templates/ca_cloudbase2_j25/images/social/blogger.png"></a>
+			</td>
+			</tr>
+			<tr><td>
+				<div style="font-family: 'Times New Roman';font-size:12pt; font-style: italic; color:green; filter:Glow(color=green, strength=12)">
+			<jdoc:include type="modules" name="position-1"/>
+			</div>	
+			</td></tr></table><br/>
     		</div>
 	    <?php
 	    return ob_get_clean();
