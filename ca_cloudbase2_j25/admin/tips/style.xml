@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<gantrytips>
+	
+	<tip label="Background Patern" id="pattern"><![CDATA[The <strong>Background Patern</strong> setting allows you to easily change the patern in background of the site. Patern is independence from background color. You can use various combinations of patern and color. ]]></tip>
+	
+	<tip label="Background Color" id="bgcolor"><![CDATA[<strong>The Background Color</strong> setting provides the ability to easily change the color used as the background. Colors can be inputted via the <strong>Colorchooser</strong> popup selector or manually using a hex code in the input field.]]></tip>
+	
+	<tip label="Module Header Background Color" id="moduleheadercolor"><![CDATA[<strong>Module Header Background Color</strong> setting provides the ability to easily change the color used as the background for module header. Choosen color is combinated with special gradient. ]]></tip>
+	
+	<tip label="Module Header Color 1" id="moduleheadertextcolor1"><![CDATA[<strong>The Module Header Color 1</strong> setting provides the ability to easily change the text color in module header (for modules with gradient in background) ]]></tip>
+	
+	<tip label="Module Header Color 2" id="moduleheadertextcolor2"><![CDATA[<strong>The Module Header Color 2</strong> setting provides the ability to easily change the text color in module header (for modules without gradient in background) ]]></tip>
+	
+	<tip label="Headlines Color" id="contentheadercolor"><![CDATA[<strong>The Headlines Color</strong> setting provides the ability to easily change the text color for headlines in main content. ]]></tip>
+	
+	<tip label="Footer Color" id="footercolor"><![CDATA[<strong>The Footer Color</strong> setting provides the ability to easily change the text color in footer area. ]]></tip>
+	
+	<tip label="Link Color" id="linkcolor"><![CDATA[<strong>The Link Color</strong> setting provides the ability to easily change the color used to highlight links. Colors can be inputted via the <strong>Colorchooser</strong> popup selector or manually using a hex code in the input field.]]></tip>
+	
+	<tip label="Button Color" id="buttoncolor"><![CDATA[<strong>The Button Color</strong> setting provides the ability to easily change the background color in buttons. ]]></tip>
+	
+	<tip label="Menu Color" id="menucolor"><![CDATA[<strong>The Menu Color</strong> setting provides the ability to easily change the font color for elements in menu. ]]></tip>
+	
+	<tip label="Drop Down Menu Hover Font Color" id="dropdownfontcolor"><![CDATA[<strong>The Drop Down Menu Hover Font Color</strong> setting provides the ability to easily change the font color for hover and active elements in drop down menu. ]]></tip>
+
+	<tip label="Drop Down Menu Hover Background Color" id="dropdownbgcolor"><![CDATA[<strong>The Drop Down Menu Hover Background Color</strong> setting provides the ability to easily change the background color for hover and active elements in drop down menu. ]]></tip>
+	
+	<tip label="WebFonts" id="webfonts"><![CDATA[This setting allows you to use <strong>3rd party WebFonts</strong> from providers such as Google. You must first set WebFonts to show and then save your changes, then the available WebFonts will appear in the Font Settings dropdown from where they can be selected. Web fonts are applied only on headings (h1, h2 tags) whereas other fonts apply on entire content (body). ]]></tip>
+	
+	<tip label="Font Settings" id="font"><![CDATA[A selection of fonts to be applied to your site's frontend is available from the <strong>Font Settings</strong> dropdown. It is also possible to set the <strong>Font Size</strong> according to your preference.]]></tip>
+
+	
+</gantrytips>
